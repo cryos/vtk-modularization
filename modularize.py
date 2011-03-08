@@ -100,20 +100,8 @@ def gen_existing_cache(src_repo_dir):
         print '[INFO] generating existing file cache from ', src_repo_dir
 
     # Read the files in the Common directory and put them in a list
-    o = popen('git', 'ls-files', 'Common', cwd=src_repo_dir)
+    o = popen('git', 'ls-files', cwd=src_repo_dir)
     files = o.split('\n')
-
-    # Read the files in the Filtering directory and put them in a list
-    o = popen('git', 'ls-files', 'Filtering', cwd=src_repo_dir)
-    files.extend(o.split('\n'))
-
-    # Read the files in the kwsys directory and put them in a list
-    o = popen('git', 'ls-files', 'Utilities/kwsys', cwd=src_repo_dir)
-    files.extend(o.split('\n'))
-
-    # Read the files in the CMake directory and put them in a list
-    o = popen('git', 'ls-files', 'CMake', cwd=src_repo_dir)
-    files.extend(o.split('\n'))
 
     with open(existing_cache_pkl, 'wb') as input:
         existing = [f for f in files if f != '']
