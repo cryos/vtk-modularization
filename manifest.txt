@@ -8,6 +8,10 @@ CMake/CMake2.4/: <ignore>
 Filtering/CMakeLists.txt:	<ignore>
 Filtering/Testing/:	<ignore>
 Filtering/vtkInformation.cxx:	<ignore>
+Infovis/TitanReadme.txt: <ignore>
+Geovis/vtkGlobeSourceSphericalToCartesianFigure.eps: <ignore>
+Geovis/vtkGlobeSourceSphericalToCartesianFigure.ipe: <ignore>
+Geovis/vtkGlobeSourceSphericalToCartesianFigure.png: <ignore>
 # For now - this list will shrink as we map all of the files
 CMakeLists.txt: <ignore>
 CTestConfig.cmake: <ignore>
@@ -54,7 +58,7 @@ README.html:
 TestingLogo.gif:
 vtkLogo.jpg:
 
-[Core]
+[Core/Core]
 
 vtkConfigure.h.in:
 Common/CaseFolding.txt:
@@ -320,7 +324,7 @@ Common/vtkXMLFileOutputWindow.h:
 Common/vtkBox.cxx:
 Common/vtkBox.h:
 
-[ComputationalGeometry]
+[Core/ComputationalGeometry]
 
 Filtering/vtkCardinalSpline.cxx:
 Filtering/vtkCardinalSpline.h:
@@ -364,7 +368,7 @@ Filtering/vtkParametricSpline.cxx:
 Filtering/vtkParametricSpline.h:
 
 
-[DataModel]
+[Core/DataModel]
 
 Common/vtkPoints2D.cxx:
 Common/vtkPoints2D.h:
@@ -639,7 +643,7 @@ Filtering/vtkWedge.cxx:
 Filtering/vtkWedge.h:
 
 
-[ExecutionModel]
+[Core/ExecutionModel]
 
 Common/vtkExtentSplitter.cxx:
 Common/vtkExtentSplitter.h:
@@ -795,7 +799,7 @@ Filtering/vtkUnstructuredGridToUnstructuredGridFilter.cxx:
 Filtering/vtkUnstructuredGridToUnstructuredGridFilter.h:
 
 
-[ImplicitFunctions]
+[Core/ImplicitFunctions]
 
 Common/vtkImplicitFunctionCollection.cxx:
 Common/vtkImplicitFunctionCollection.h:
@@ -1383,7 +1387,7 @@ Hybrid/vtkMNITransformReader.h:
 Hybrid/vtkMNITransformWriter.cxx:
 Hybrid/vtkMNITransformWriter.h:
 
-[Math/Core]
+[Core/Math]
 
 Common/vtkAmoebaMinimizer.cxx:
 Common/vtkAmoebaMinimizer.h:
@@ -1411,7 +1415,7 @@ Common/vtkRungeKutta45.h:
 Common/vtkRungeKutta4.cxx:
 Common/vtkRungeKutta4.h:
 
-[Misc]
+[Core/Misc]
 
 Common/vtkAssemblyNode.cxx:
 Common/vtkAssemblyNode.h:
@@ -1462,7 +1466,7 @@ Filtering/vtkScalarTree.h:
 Filtering/vtkSimpleScalarTree.cxx:
 Filtering/vtkSimpleScalarTree.h:
 
-[System]
+[Core/System]
 
 Common/vtkClientSocket.cxx:
 Common/vtkClientSocket.h:
@@ -1489,7 +1493,7 @@ Common/vtkThreadMessager.h:
 Common/vtkTimerLog.cxx:
 Common/vtkTimerLog.h:
 
-[Transforms]
+[Core/Transforms]
 
 Common/vtkAbstractTransform.cxx:
 Common/vtkAbstractTransform.h:
@@ -1527,7 +1531,7 @@ Hybrid/vtkIterativeClosestPointTransform.cxx:
 Hybrid/vtkIterativeClosestPointTransform.h:
 
 
-[Wrap]
+[Wrapping]
 
 Common/vtkJavaAwt.h:
 Common/vtkJavaUtil.cxx:
@@ -1908,7 +1912,7 @@ Infovis/vtkBoostSplitTableField.h:
 Infovis/vtkBoostSplitTableField.cxx:
 
 
-[Infovis/IO]
+[IO/Infovis]
 
 Infovis/vtkChacoGraphReader.h:
 Infovis/vtkChacoGraphReader.cxx:
@@ -1928,7 +1932,7 @@ Infovis/vtkTulipReader.h:
 Infovis/vtkTulipReader.cxx:
 
 
-[Infovis/XML]
+[IO/XMLInfovis]
 
 Infovis/vtkXGMLReader.h:
 Infovis/vtkXGMLReader.cxx:
@@ -2395,6 +2399,26 @@ Graphics/vtkVectorNorm.h:
 Graphics/vtkWindowedSincPolyDataFilter.cxx:
 Graphics/vtkWindowedSincPolyDataFilter.h:
 
+[Filters/Generic]
+
+GenericFiltering/vtkGenericClip.cxx:
+GenericFiltering/vtkGenericClip.h:
+GenericFiltering/vtkGenericContourFilter.cxx:
+GenericFiltering/vtkGenericContourFilter.h:
+GenericFiltering/vtkGenericCutter.cxx:
+GenericFiltering/vtkGenericCutter.h:
+GenericFiltering/vtkGenericDataSetTessellator.cxx:
+GenericFiltering/vtkGenericDataSetTessellator.h:
+GenericFiltering/vtkGenericGeometryFilter.cxx:
+GenericFiltering/vtkGenericGeometryFilter.h:
+GenericFiltering/vtkGenericGlyph3DFilter.cxx:
+GenericFiltering/vtkGenericGlyph3DFilter.h:
+GenericFiltering/vtkGenericOutlineFilter.cxx:
+GenericFiltering/vtkGenericOutlineFilter.h:
+GenericFiltering/vtkGenericProbeFilter.cxx:
+GenericFiltering/vtkGenericProbeFilter.h:
+GenericFiltering/vtkGenericStreamTracer.cxx:
+GenericFiltering/vtkGenericStreamTracer.h:
 
 [Filters/Geometry]
 
@@ -2472,8 +2496,6 @@ Graphics/vtkProgrammableFilter.cxx:
 Graphics/vtkProgrammableFilter.h:
 Graphics/vtkProgrammableGlyphFilter.cxx:
 Graphics/vtkProgrammableGlyphFilter.h:
-
-
 
 [Filters/Extraction]
 
@@ -2876,7 +2898,7 @@ Graphics/vtkTriangularTCoords.h:
 
 
 
-[Video]
+[Filters/Video]
 
 Hybrid/vtkMILVideoSource.cxx:
 Hybrid/vtkMILVideoSource.h:
@@ -3904,8 +3926,9 @@ Rendering/vtkXRenderWindowInteractor.cxx:
 Rendering/vtkXRenderWindowInteractor.h:
 Rendering/vtkXRenderWindowTclInteractor.cxx:
 Rendering/vtkXRenderWindowTclInteractor.h:
+Rendering/CheckglXGetProcAddressARB.cxx:
 
-[VolumeRendering]
+[Rendering/Volume]
 
 VolumeRendering/:
 
