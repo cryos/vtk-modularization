@@ -58,7 +58,7 @@ README.html:
 TestingLogo.gif:
 vtkLogo.jpg:
 
-[Core/Core]
+[Common/Core]
 
 vtkConfigure.h.in:
 Common/CaseFolding.txt:
@@ -324,7 +324,7 @@ Common/vtkXMLFileOutputWindow.h:
 Common/vtkBox.cxx:
 Common/vtkBox.h:
 
-[Core/ComputationalGeometry]
+[Common/ComputationalGeometry]
 
 Filtering/vtkCardinalSpline.cxx:
 Filtering/vtkCardinalSpline.h:
@@ -368,7 +368,7 @@ Filtering/vtkParametricSpline.cxx:
 Filtering/vtkParametricSpline.h:
 
 
-[Core/DataModel]
+[Common/DataModel]
 
 Common/vtkPoints2D.cxx:
 Common/vtkPoints2D.h:
@@ -643,7 +643,7 @@ Filtering/vtkWedge.cxx:
 Filtering/vtkWedge.h:
 
 
-[Core/ExecutionModel]
+[Common/ExecutionModel]
 
 Common/vtkExtentSplitter.cxx:
 Common/vtkExtentSplitter.h:
@@ -799,7 +799,7 @@ Filtering/vtkUnstructuredGridToUnstructuredGridFilter.cxx:
 Filtering/vtkUnstructuredGridToUnstructuredGridFilter.h:
 
 
-[Core/ImplicitFunctions]
+[Common/ImplicitFunctions]
 
 Common/vtkImplicitFunctionCollection.cxx:
 Common/vtkImplicitFunctionCollection.h:
@@ -1389,7 +1389,7 @@ IO/vtkXMLWriterF.h:
 IO/vtkXYZMolReader.cxx:
 IO/vtkXYZMolReader.h:
 
-[Core/Math]
+[Common/Math]
 
 Common/vtkAmoebaMinimizer.cxx:
 Common/vtkAmoebaMinimizer.h:
@@ -1417,7 +1417,7 @@ Common/vtkRungeKutta45.h:
 Common/vtkRungeKutta4.cxx:
 Common/vtkRungeKutta4.h:
 
-[Core/Misc]
+[Common/Misc]
 
 Common/vtkAssemblyNode.cxx:
 Common/vtkAssemblyNode.h:
@@ -1468,7 +1468,7 @@ Filtering/vtkScalarTree.h:
 Filtering/vtkSimpleScalarTree.cxx:
 Filtering/vtkSimpleScalarTree.h:
 
-[Core/System]
+[Common/System]
 
 Common/vtkClientSocket.cxx:
 Common/vtkClientSocket.h:
@@ -1495,7 +1495,7 @@ Common/vtkThreadMessager.h:
 Common/vtkTimerLog.cxx:
 Common/vtkTimerLog.h:
 
-[Core/Transforms]
+[Common/Transforms]
 
 Common/vtkAbstractTransform.cxx:
 Common/vtkAbstractTransform.h:
