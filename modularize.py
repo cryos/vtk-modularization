@@ -341,12 +341,16 @@ def update_modules():
 
             # copy the files from src to target
             if key[-1] == '/':
+                shutil.rmtree(dst_path)
                 shutil.copytree(src_path, dst_path)
             else:
                 if not os.path.isdir(os.path.dirname(dst_path)):
                     if verbose:
                         print '[INFO] Making directory:', os.path.dirname(dst_path)
-                    os.makedirs(os.path.dirname(dst_path))
+                    if os.path.dirname(dst_path) == "":
+                      print 'Zero length string - root directory...'
+                    else:
+                      os.makedirs(os.path.dirname(dst_path))
                 shutil.copy2(src_path, dst_path)
 
             if verbose: print '[INFO] Copied'
