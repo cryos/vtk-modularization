@@ -2620,7 +2620,7 @@ Graphics/vtkTexturedSphereSource.cxx:
 Graphics/vtkTexturedSphereSource.h:
 
 
-[Filters/Filters]
+[Filters/General]
 
 Graphics/vtkAnnotationLink.cxx:
 Graphics/vtkAnnotationLink.h:
