@@ -20,7 +20,6 @@ CTestConfig.cmake: <ignore>
 .gitattributes: <ignore>
 Testing.txt: <ignore>
 TextAnalysis/CMakeLists.txt: <ignore>
-vtkToolkits.h.in: <ignore>
 Charts/CMakeLists.txt: <ignore>
 GenericFiltering/CMakeLists.txt: <ignore>
 Geovis/CMakeLists.txt: <ignore>
@@ -53,12 +52,17 @@ Imaging/Testing/: <ignore>
 Examples/: <ignore>
 Wrapping/: <ignore>
 GenericFiltering/README.html: <ignore>
-GUISupport/Qt/Chart/: <ignore>
+
 GUISupport/Qt/Testing/: <ignore>
 GUISupport/CMakeLists.txt: <ignore>
 GUISupport/Qt/CMakeLists.txt: <ignore>
 VolumeRendering/Testing/: <ignore>
 VolumeRendering/CMakeLists.txt: <ignore>
+# No longer being built
+Common/vtkWinCE.cxx: <ignore>
+Common/vtkWinCE.h: <ignore>
+# Deprecated, not moved forward
+GUISupport/Qt/Chart/: <ignore>
 
 [.]
 
@@ -69,6 +73,7 @@ vtkLogo.jpg:
 
 [Common/Core]
 
+vtkToolkits.h.in:
 vtkConfigure.h.in:
 Common/CaseFolding.txt:
 Common/vtkABI.h:
@@ -320,13 +325,36 @@ Common/vtkWin32OutputWindow.h:
 Common/vtkWin32OutputWindowProcessEncoded.c:
 Common/vtkWin32ProcessOutputWindow.cxx:
 Common/vtkWin32ProcessOutputWindow.h:
-Common/vtkWinCE.cxx:
-Common/vtkWinCE.h:
 Common/vtkWindow.cxx:
 Common/vtkWindow.h:
 Common/vtkWindows.h:
 Common/vtkXMLFileOutputWindow.cxx:
 Common/vtkXMLFileOutputWindow.h:
+Common/vtkMathConfigure.h.in:
+Common/vtkMath.cxx:
+Common/vtkMath.h:
+
+# For vtkDataArray
+Common/vtkLookupTable.cxx:
+Common/vtkLookupTable.h:
+Common/vtkScalarsToColors.cxx:
+Common/vtkScalarsToColors.h:
+
+# For vtkDebugLeaks
+Common/vtkCriticalSection.cxx:
+Common/vtkCriticalSection.h:
+
+# For vtkGarbageCollector
+Common/vtkMultiThreader.cxx:
+Common/vtkMultiThreader.h:
+
+# For vtkMultiThreader
+Common/vtkMutexLock.cxx:
+Common/vtkMutexLock.h:
+
+# For vtkObjectFactory
+Common/vtkDynamicLoader.cxx:
+Common/vtkDynamicLoader.h:
 
 [AMR/Core]
 
@@ -1408,9 +1436,6 @@ Common/vtkFunctionSet.cxx:
 Common/vtkFunctionSet.h:
 Common/vtkInitialValueProblemSolver.cxx:
 Common/vtkInitialValueProblemSolver.h:
-Common/vtkMathConfigure.h.in:
-Common/vtkMath.cxx:
-Common/vtkMath.h:
 Common/vtkMatrix3x3.cxx:
 Common/vtkMatrix3x3.h:
 Common/vtkMatrix4x4.cxx:
@@ -1481,16 +1506,8 @@ Filtering/vtkSimpleScalarTree.h:
 
 Common/vtkClientSocket.cxx:
 Common/vtkClientSocket.h:
-Common/vtkCriticalSection.cxx:
-Common/vtkCriticalSection.h:
 Common/vtkDirectory.cxx:
 Common/vtkDirectory.h:
-Common/vtkDynamicLoader.cxx:
-Common/vtkDynamicLoader.h:
-Common/vtkMultiThreader.cxx:
-Common/vtkMultiThreader.h:
-Common/vtkMutexLock.cxx:
-Common/vtkMutexLock.h:
 Common/vtkProcessStatistics.cxx:
 Common/vtkProcessStatistics.h:
 Common/vtkServerSocket.cxx:
@@ -2972,12 +2989,12 @@ Hybrid/vtkWeightedTransformFilter.h:
 
 [Interaction/Selection]
 
-Filtering/vtkSelection.cxx::
-Filtering/vtkSelection.h::
-Filtering/vtkSelectionNode.cxx::
-Filtering/vtkSelectionNode.h::
-Filtering/vtkSelectionAlgorithm.cxx::
-Filtering/vtkSelectionAlgorithm.h::
+Filtering/vtkSelection.cxx:
+Filtering/vtkSelection.h:
+Filtering/vtkSelectionNode.cxx:
+Filtering/vtkSelectionNode.h:
+Filtering/vtkSelectionAlgorithm.cxx:
+Filtering/vtkSelectionAlgorithm.h:
 Rendering/vtkHardwareSelectionPolyDataPainter.cxx:
 Rendering/vtkHardwareSelectionPolyDataPainter.h:
 Rendering/vtkAbstractPropPicker.cxx:
@@ -3340,12 +3357,10 @@ Rendering/vtkCocoaTkUtilities.mm:
 
 [Rendering/Core]
 
-Common/vtkLogLookupTable.cxx::
-Common/vtkLogLookupTable.h::
-Common/vtkLookupTable.cxx::
-Common/vtkLookupTable.h::
-Common/vtkLookupTableWithEnabling.cxx::
-Common/vtkLookupTableWithEnabling.h::
+Common/vtkLogLookupTable.cxx:
+Common/vtkLogLookupTable.h:
+Common/vtkLookupTableWithEnabling.cxx:
+Common/vtkLookupTableWithEnabling.h:
 Common/vtkPropCollection.cxx:
 Common/vtkPropCollection.h:
 Common/vtkProp.cxx:
@@ -3353,8 +3368,6 @@ Common/vtkProperty2D.cxx:
 Common/vtkProperty2D.h:
 Common/vtkProp.h:
 Common/vtkRayCastStructures.h:
-Common/vtkScalarsToColors.cxx:
-Common/vtkScalarsToColors.h:
 Common/vtkWindowLevelLookupTable.cxx:
 Common/vtkWindowLevelLookupTable.h:
 Filtering/vtkAbstractMapper.cxx:
