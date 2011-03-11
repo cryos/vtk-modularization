@@ -905,6 +905,8 @@ IO/vtkODBCInternals.h:
 IO/vtkODBCQuery.cxx:
 IO/vtkODBCQuery.h:
 IO/vtkOffsetsManagerArray.h:
+IO/vtkSortFileNames.cxx:
+IO/vtkSortFileNames.h:
 IO/vtkUTF16TextCodec.cxx:
 IO/vtkUTF16TextCodec.h:
 IO/vtkUTF8TextCodec.cxx:
@@ -917,6 +919,9 @@ IO/vtkSimplePointsReader.cxx:
 IO/vtkSimplePointsReader.h:
 IO/vtkWriter.cxx:
 IO/vtkWriter.h:
+# FIXME: Should this go in its own kit? ZLib is pretty small/widely used.
+IO/vtkZLibDataCompressor.cxx:
+IO/vtkZLibDataCompressor.h:
 
 
 [IO/Exodus]
@@ -961,8 +966,6 @@ Hybrid/vtkX3DExporterWriter.cxx:
 Hybrid/vtkX3DExporterWriter.h:
 Hybrid/vtkX3DExporterXMLWriter.cxx:
 Hybrid/vtkX3DExporterXMLWriter.h:
-Imaging/vtkImageExport.cxx:
-Imaging/vtkImageExport.h:
 Rendering/vtkExporter.cxx:
 Rendering/vtkExporter.h:
 Rendering/vtkGL2PSExporter.cxx:
@@ -1051,8 +1054,6 @@ IO/vtkSTLReader.cxx:
 IO/vtkSTLReader.h:
 IO/vtkSTLWriter.cxx:
 IO/vtkSTLWriter.h:
-IO/vtkSortFileNames.cxx:
-IO/vtkSortFileNames.h:
 IO/vtkStructuredGridReader.cxx:
 IO/vtkStructuredGridReader.h:
 IO/vtkStructuredGridWriter.cxx:
@@ -1115,6 +1116,12 @@ IO/vtkJPEGReader.cxx:
 IO/vtkJPEGReader.h:
 IO/vtkJPEGWriter.cxx:
 IO/vtkJPEGWriter.h:
+Imaging/vtkImageExport.cxx:
+Imaging/vtkImageExport.h:
+Imaging/vtkImageImport.cxx:
+Imaging/vtkImageImport.h:
+Imaging/vtkImageImportExecutive.cxx:
+Imaging/vtkImageImportExecutive.h:
 IO/vtkImageReader.cxx:
 IO/vtkImageReader.h:
 IO/vtkImageReader2.cxx:
@@ -1140,16 +1147,9 @@ IO/vtkVolume16Reader.cxx:
 IO/vtkVolume16Reader.h:
 IO/vtkVolumeReader.cxx:
 IO/vtkVolumeReader.h:
-IO/vtkZLibDataCompressor.cxx:
-IO/vtkZLibDataCompressor.h:
-
 
 [IO/Import]
 
-Imaging/vtkImageImport.cxx:
-Imaging/vtkImageImport.h:
-Imaging/vtkImageImportExecutive.cxx:
-Imaging/vtkImageImportExecutive.h:
 Rendering/vtkImporter.cxx:
 Rendering/vtkImporter.h:
 Hybrid/vtk3DS.h:
@@ -1246,7 +1246,6 @@ IO/vtkEnSightReader.h:
 IO/vtkGenericEnSightReader.cxx:
 IO/vtkGenericEnSightReader.h:
 
-
 [IO/NetCDF]
 
 IO/vtkNetCDFCFReader.cxx:
@@ -1255,7 +1254,6 @@ IO/vtkNetCDFPOPReader.cxx:
 IO/vtkNetCDFPOPReader.h:
 IO/vtkNetCDFReader.cxx:
 IO/vtkNetCDFReader.h:
-
 
 [IO/PLY]
 
@@ -1266,6 +1264,14 @@ IO/vtkPLYReader.h:
 IO/vtkPLYWriter.cxx:
 IO/vtkPLYWriter.h:
 
+[IO/Video]
+
+Hybrid/vtkMILVideoSource.cxx:
+Hybrid/vtkMILVideoSource.h:
+Hybrid/vtkVideoSource.cxx:
+Hybrid/vtkVideoSource.h:
+Hybrid/vtkWin32VideoSource.cxx:
+Hybrid/vtkWin32VideoSource.h:
 
 [IO/XML]
 
@@ -2891,17 +2897,6 @@ Graphics/vtkTransformTextureCoords.cxx:
 Graphics/vtkTransformTextureCoords.h:
 Graphics/vtkTriangularTCoords.cxx:
 Graphics/vtkTriangularTCoords.h:
-
-
-[Filters/Video]
-
-Hybrid/vtkMILVideoSource.cxx:
-Hybrid/vtkMILVideoSource.h:
-Hybrid/vtkVideoSource.cxx:
-Hybrid/vtkVideoSource.h:
-Hybrid/vtkWin32VideoSource.cxx:
-Hybrid/vtkWin32VideoSource.h:
-
 
 [Filters/Hybrid]
 
