@@ -319,7 +319,7 @@ Common/vtkWindows.h:
 Common/vtkXMLFileOutputWindow.cxx:
 Common/vtkXMLFileOutputWindow.h:
 
-[AMR]
+[AMR/Core]
 
 Common/vtkBox.cxx:
 Common/vtkBox.h:
@@ -1992,19 +1992,27 @@ Infovis/vtkSQLDatabaseTableSource.cxx:
 Infovis/vtkSQLGraphReader.h:
 Infovis/vtkSQLGraphReader.cxx:
 
+[Views/Core]
 
-[Infovis/Views]
-
-Infovis/vtkApplyColors.h:
-Infovis/vtkApplyColors.cxx:
-Infovis/vtkApplyIcons.h:
-Infovis/vtkApplyIcons.cxx:
 Views/vtkConvertSelectionDomain.h:
 Views/vtkConvertSelectionDomain.cxx:
 Views/vtkDataRepresentation.h:
 Views/vtkDataRepresentation.cxx:
 Views/vtkEmptyRepresentation.h:
 Views/vtkEmptyRepresentation.cxx:
+Views/vtkRenderViewBase.h:
+Views/vtkRenderViewBase.cxx:
+Views/vtkView.h:
+Views/vtkView.cxx:
+Views/vtkViewUpdater.h:
+Views/vtkViewUpdater.cxx:
+
+[Views/Infovis]
+
+Infovis/vtkApplyColors.h:
+Infovis/vtkApplyColors.cxx:
+Infovis/vtkApplyIcons.h:
+Infovis/vtkApplyIcons.cxx:
 Views/vtkGraphLayoutView.h:
 Views/vtkGraphLayoutView.cxx:
 Views/vtkHierarchicalGraphPipeline.h:
@@ -2027,8 +2035,6 @@ Views/vtkPipelineGraphSource.h:
 Views/vtkPipelineGraphSource.cxx:
 Views/vtkRenderView.h:
 Views/vtkRenderView.cxx:
-Views/vtkRenderViewBase.h:
-Views/vtkRenderViewBase.cxx:
 Views/vtkRenderedGraphRepresentation.h:
 Views/vtkRenderedGraphRepresentation.cxx:
 Views/vtkRenderedHierarchyRepresentation.h:
@@ -2045,12 +2051,8 @@ Views/vtkTreeMapView.h:
 Views/vtkTreeMapView.cxx:
 Views/vtkTreeRingView.h:
 Views/vtkTreeRingView.cxx:
-Views/vtkView.h:
-Views/vtkView.cxx:
-Views/vtkViewUpdater.h:
-Views/vtkViewUpdater.cxx:
 
-[Geovis]
+[Geovis/Core]
 
 Geovis/vtkCompassRepresentation.h:
 Geovis/vtkCompassRepresentation.cxx:
@@ -2058,8 +2060,6 @@ Geovis/vtkCompassWidget.h:
 Geovis/vtkCompassWidget.cxx:
 Geovis/vtkGeoAdaptiveArcs.h:
 Geovis/vtkGeoAdaptiveArcs.cxx:
-Geovis/vtkGeoAlignedImageRepresentation.h:
-Geovis/vtkGeoAlignedImageRepresentation.cxx:
 Geovis/vtkGeoAlignedImageSource.h:
 Geovis/vtkGeoAlignedImageSource.cxx:
 Geovis/vtkGeoArcs.h:
@@ -2104,14 +2104,19 @@ Geovis/vtkGeoTreeNode.h:
 Geovis/vtkGeoTreeNode.cxx:
 Geovis/vtkGeoTreeNodeCache.h:
 Geovis/vtkGeoTreeNodeCache.cxx:
+Geovis/vtkGlobeSource.h:
+Geovis/vtkGlobeSource.cxx:
+
+[Views/Geovis]
+
+Geovis/vtkGeoAlignedImageRepresentation.h:
+Geovis/vtkGeoAlignedImageRepresentation.cxx:
 Geovis/vtkGeoView.h:
 Geovis/vtkGeoView.cxx:
 Geovis/vtkGeoView2D.h:
 Geovis/vtkGeoView2D.cxx:
-Geovis/vtkGlobeSource.h:
-Geovis/vtkGlobeSource.cxx:
 
-[TextAnalysis]
+[TextAnalysis/Core]
 
 TextAnalysis/vtkAssignMimeType.h:
 TextAnalysis/vtkAssignMimeType.cxx:
@@ -2195,8 +2200,6 @@ Charts/vtkContextScene.cxx:
 Charts/vtkContextScenePrivate.h:
 Charts/vtkContextTransform.h:
 Charts/vtkContextTransform.cxx:
-Charts/vtkContextView.h:
-Charts/vtkContextView.cxx:
 Charts/vtkImageItem.h:
 Charts/vtkImageItem.cxx:
 Charts/vtkOpenGL2ContextDevice2D.h:
@@ -2212,6 +2215,10 @@ Charts/vtkTooltipItem.h:
 Charts/vtkTooltipItem.cxx:
 Charts/vtkVector.h:
 
+[Views/Context2D]
+
+Charts/vtkContextView.h:
+Charts/vtkContextView.cxx:
 
 [Charts/Core]
 
