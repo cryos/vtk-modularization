@@ -1865,7 +1865,12 @@ Infovis/vtkStreamingStatistics.h:
 Infovis/vtkStreamingStatistics.cxx:
 Infovis/vtkUnivariateStatisticsAlgorithm.h:
 Infovis/vtkUnivariateStatisticsAlgorithm.cxx:
-
+Graphics/vtkRAdapter.cxx:
+Graphics/vtkRAdapter.h:
+Graphics/vtkRCalculatorFilter.cxx:
+Graphics/vtkRCalculatorFilter.h:
+Graphics/vtkRInterface.cxx:
+Graphics/vtkRInterface.h:
 
 [Infovis/ParallelStatistics]
 
@@ -2726,8 +2731,6 @@ Graphics/vtkMatrixMathFilter.cxx:
 Graphics/vtkMatrixMathFilter.h:
 Graphics/vtkMergeCells.cxx:
 Graphics/vtkMergeCells.h:
-Graphics/vtkMeshQuality.cxx:
-Graphics/vtkMeshQuality.h:
 Graphics/vtkModelMetadata.cxx:
 Graphics/vtkModelMetadata.h:
 Graphics/vtkModifiedBSPTree.cxx:
@@ -2761,12 +2764,6 @@ Graphics/vtkQuadratureSchemeDictionaryGenerator.cxx:
 Graphics/vtkQuadratureSchemeDictionaryGenerator.h:
 Graphics/vtkQuantizePolyDataPoints.cxx:
 Graphics/vtkQuantizePolyDataPoints.h:
-Graphics/vtkRAdapter.cxx:
-Graphics/vtkRAdapter.h:
-Graphics/vtkRCalculatorFilter.cxx:
-Graphics/vtkRCalculatorFilter.h:
-Graphics/vtkRInterface.cxx:
-Graphics/vtkRInterface.h:
 Graphics/vtkRandomAttributeGenerator.cxx:
 Graphics/vtkRandomAttributeGenerator.h:
 Graphics/vtkRectilinearGridClip.cxx:
@@ -2842,6 +2839,10 @@ Graphics/vtkWarpVector.h:
 Graphics/vtkYoungsMaterialInterface.cxx:
 Graphics/vtkYoungsMaterialInterface.h:
 
+[Filters/Verdict]
+
+Graphics/vtkMeshQuality.cxx:
+Graphics/vtkMeshQuality.h:
 
 [Filters/HyperOctree]
 
