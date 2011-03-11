@@ -1215,6 +1215,18 @@ IO/vtkMINCImageReader.cxx:
 IO/vtkMINCImageReader.h:
 IO/vtkMINCImageWriter.cxx:
 IO/vtkMINCImageWriter.h:
+Hybrid/vtkMNIObjectReader.cxx:
+Hybrid/vtkMNIObjectReader.h:
+Hybrid/vtkMNIObjectWriter.cxx:
+Hybrid/vtkMNIObjectWriter.h:
+Hybrid/vtkMNITagPointReader.cxx:
+Hybrid/vtkMNITagPointReader.h:
+Hybrid/vtkMNITagPointWriter.cxx:
+Hybrid/vtkMNITagPointWriter.h:
+Hybrid/vtkMNITransformReader.cxx:
+Hybrid/vtkMNITransformReader.h:
+Hybrid/vtkMNITransformWriter.cxx:
+Hybrid/vtkMNITransformWriter.h:
 
 
 [IO/EnSight]
@@ -1370,22 +1382,6 @@ IO/vtkXMLWriterC.h:
 IO/vtkXMLWriterF.h:
 IO/vtkXYZMolReader.cxx:
 IO/vtkXYZMolReader.h:
-
-
-[IO/MNIT]
-
-Hybrid/vtkMNIObjectReader.cxx:
-Hybrid/vtkMNIObjectReader.h:
-Hybrid/vtkMNIObjectWriter.cxx:
-Hybrid/vtkMNIObjectWriter.h:
-Hybrid/vtkMNITagPointReader.cxx:
-Hybrid/vtkMNITagPointReader.h:
-Hybrid/vtkMNITagPointWriter.cxx:
-Hybrid/vtkMNITagPointWriter.h:
-Hybrid/vtkMNITransformReader.cxx:
-Hybrid/vtkMNITransformReader.h:
-Hybrid/vtkMNITransformWriter.cxx:
-Hybrid/vtkMNITransformWriter.h:
 
 [Core/Math]
 
@@ -2897,7 +2893,6 @@ Graphics/vtkTriangularTCoords.cxx:
 Graphics/vtkTriangularTCoords.h:
 
 
-
 [Filters/Video]
 
 Hybrid/vtkMILVideoSource.cxx:
@@ -3673,7 +3668,6 @@ Rendering/vtkVolumetricPass.cxx:
 Rendering/vtkVolumetricPass.h:
 Rendering/vtkWindowToImageFilter.cxx:
 Rendering/vtkWindowToImageFilter.h:
-
 
 [Rendering/FreeType]
 
