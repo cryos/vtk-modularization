@@ -58,9 +58,6 @@ GUISupport/CMakeLists.txt: <ignore>
 GUISupport/Qt/CMakeLists.txt: <ignore>
 VolumeRendering/Testing/: <ignore>
 VolumeRendering/CMakeLists.txt: <ignore>
-# No longer being built
-Common/vtkWinCE.cxx: <ignore>
-Common/vtkWinCE.h: <ignore>
 # Deprecated, not moved forward
 GUISupport/Qt/Chart/: <ignore>
 
@@ -1626,7 +1623,6 @@ CMake/TestNO_ICC_IDYNAMIC_NEEDED.cxx:
 CMake/TestOggTheoraSubsampling.c:
 CMake/TryRunResults-VTK-bgl-gcc.cmake:
 CMake/UseMatlabMex.cmake:
-CMake/vtkCheckCXXAcceptsFlags.cmake:
 CMake/vtkCheckSourceTree.cmake:
 CMake/vtkCompilerExtras.cmake:
 CMake/vtkDependentOption.cmake:
@@ -3681,6 +3677,16 @@ Rendering/vtkVolumetricPass.cxx:
 Rendering/vtkVolumetricPass.h:
 Rendering/vtkWindowToImageFilter.cxx:
 Rendering/vtkWindowToImageFilter.h:
+Rendering/vtkImageMapper3D.cxx:
+Rendering/vtkImageMapper3D.h:
+Rendering/vtkImageProperty.cxx:
+Rendering/vtkImageProperty.h:
+Rendering/vtkImageResliceMapper.cxx:
+Rendering/vtkImageResliceMapper.h:
+Rendering/vtkImageSlice.cxx:
+Rendering/vtkImageSlice.h:
+Rendering/vtkImageSliceMapper.cxx:
+Rendering/vtkImageSliceMapper.h:
 
 [Rendering/FreeType]
 
@@ -3789,8 +3795,6 @@ Rendering/vtkOpenGLGlyph3DMapper.cxx:
 Rendering/vtkOpenGLGlyph3DMapper.h:
 Rendering/vtkOpenGLHardwareSupport.cxx:
 Rendering/vtkOpenGLHardwareSupport.h:
-Rendering/vtkOpenGLImageActor.cxx:
-Rendering/vtkOpenGLImageActor.h:
 Rendering/vtkOpenGLImageMapper.cxx:
 Rendering/vtkOpenGLImageMapper.h:
 Rendering/vtkOpenGLLight.cxx:
@@ -3826,7 +3830,11 @@ Rendering/vtkOpenGLStateCache.h:
 Rendering/vtkOpenGLTexture.cxx:
 Rendering/vtkOpenGLTexture.h:
 Rendering/vtkgluPickMatrix.h:
-
+Rendering/vtkOpenGLImageResliceMapper.cxx:
+Rendering/vtkOpenGLImageResliceMapper.h:
+Rendering/vtkOpenGLImageSliceMapper.cxx:
+Rendering/vtkOpenGLImageSliceMapper.h:
+Rendering/vtkTextureBicubicARB_fp.asm:
 
 [Rendering/MESA]
 
@@ -3842,8 +3850,6 @@ Rendering/vtkMesaDisplayListPainter.cxx:
 Rendering/vtkMesaDisplayListPainter.h:
 Rendering/vtkMesaFreeTypeTextMapper.cxx:
 Rendering/vtkMesaFreeTypeTextMapper.h:
-Rendering/vtkMesaImageActor.cxx:
-Rendering/vtkMesaImageActor.h:
 Rendering/vtkMesaImageMapper.cxx:
 Rendering/vtkMesaImageMapper.h:
 Rendering/vtkMesaLight.cxx:
@@ -3868,7 +3874,10 @@ Rendering/vtkMesaScalarsToColorsPainter.cxx:
 Rendering/vtkMesaScalarsToColorsPainter.h:
 Rendering/vtkMesaTexture.cxx:
 Rendering/vtkMesaTexture.h:
-
+Rendering/vtkMesaImageResliceMapper.cxx:
+Rendering/vtkMesaImageResliceMapper.h:
+Rendering/vtkMesaImageSliceMapper.cxx:
+Rendering/vtkMesaImageSliceMapper.h:
 
 [Rendering/Text]
 
@@ -3938,13 +3947,6 @@ Rendering/vtkWin32OpenGLRenderWindow.cxx:
 Rendering/vtkWin32OpenGLRenderWindow.h:
 Rendering/vtkWin32RenderWindowInteractor.cxx:
 Rendering/vtkWin32RenderWindowInteractor.h:
-
-
-[Rendering/WinCE]
-
-Rendering/vtkWinCEOpenGLRenderWindow.cxx:
-Rendering/vtkWinCEOpenGLRenderWindow.h:
-
 
 [Rendering/X]
 
