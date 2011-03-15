@@ -1196,7 +1196,6 @@ Hybrid/vtkVRML.h:
 Hybrid/vtkVRMLImporter.cxx:
 Hybrid/vtkVRMLImporter.h:
 
-
 [IO/SQL]
 
 IO/vtkRowQuery.cxx:
@@ -1241,6 +1240,12 @@ IO/vtkTableToDatabaseWriter.cxx:
 IO/vtkTableToDatabaseWriter.h:
 IO/vtkTableWriter.cxx:
 IO/vtkTableWriter.h:
+Infovis/vtkSQLDatabaseGraphSource.h:
+Infovis/vtkSQLDatabaseGraphSource.cxx:
+Infovis/vtkSQLDatabaseTableSource.h:
+Infovis/vtkSQLDatabaseTableSource.cxx:
+Infovis/vtkSQLGraphReader.h:
+Infovis/vtkSQLGraphReader.cxx:
 
 
 [IO/MINC]
@@ -1684,16 +1689,6 @@ Infovis/vtkTimePointToString.h:
 Infovis/vtkTimePointToString.cxx:
 
 
-[Infovis/GeometryFilters]
-
-Infovis/vtkAppendPoints.h:
-Infovis/vtkAppendPoints.cxx:
-Infovis/vtkPassThrough.h:
-Infovis/vtkPassThrough.cxx:
-Infovis/vtkSCurveSpline.h:
-Infovis/vtkSCurveSpline.cxx:
-
-
 [Infovis/Core]
 
 Infovis/vtkAddMembershipArray.h:
@@ -1963,10 +1958,6 @@ Infovis/vtkRISReader.h:
 Infovis/vtkRISReader.cxx:
 Infovis/vtkTulipReader.h:
 Infovis/vtkTulipReader.cxx:
-
-
-[IO/XMLInfovis]
-
 Infovis/vtkXGMLReader.h:
 Infovis/vtkXGMLReader.cxx:
 Infovis/vtkXMLTreeReader.h:
@@ -2008,15 +1999,6 @@ Infovis/vtkSplitColumnComponents.cxx:
 Infovis/vtkTransferAttributes.h:
 Infovis/vtkTransferAttributes.cxx:
 
-
-[Infovis/SQL]
-
-Infovis/vtkSQLDatabaseGraphSource.h:
-Infovis/vtkSQLDatabaseGraphSource.cxx:
-Infovis/vtkSQLDatabaseTableSource.h:
-Infovis/vtkSQLDatabaseTableSource.cxx:
-Infovis/vtkSQLGraphReader.h:
-Infovis/vtkSQLGraphReader.cxx:
 
 [Views/Core]
 
@@ -2195,7 +2177,7 @@ TextAnalysis/vtkTokenizer.cxx:
 TextAnalysis/vtkUnityMatrixWeighting.h:
 TextAnalysis/vtkUnityMatrixWeighting.cxx:
 
-[Charts/Context2D]
+[Rendering/Context2D]
 
 Charts/vtkAbstractContextBufferId.h:
 Charts/vtkAbstractContextBufferId.cxx:
@@ -2871,6 +2853,12 @@ Graphics/vtkWarpVector.cxx:
 Graphics/vtkWarpVector.h:
 Graphics/vtkYoungsMaterialInterface.cxx:
 Graphics/vtkYoungsMaterialInterface.h:
+Infovis/vtkAppendPoints.h:
+Infovis/vtkAppendPoints.cxx:
+Infovis/vtkPassThrough.h:
+Infovis/vtkPassThrough.cxx:
+Infovis/vtkSCurveSpline.h:
+Infovis/vtkSCurveSpline.cxx:
 
 [Filters/Verdict]
 
