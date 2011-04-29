@@ -5,6 +5,10 @@ vtkIncludeDirectories.cmake: <ignore>
 Common/CMakeLists.txt:	<ignore>
 Common/Testing/:	<ignore>
 CMake/CMake2.4/: <ignore>
+CMake/vtk-forward.c.in: <ignore>
+CMake/vtkForwardingExecutable.cmake: <ignore>
+CMake/vtkTestBuiltins.cmake: <ignore>
+CMake/vtkTestSyncBuiltins.cxx: <ignore>
 Filtering/CMakeLists.txt:	<ignore>
 Parallel/CMakeLists.txt: <ignore>
 Imaging/CMakeLists.txt: <ignore>
@@ -66,6 +70,7 @@ GUISupport/Qt/Chart/: <ignore>
 Copyright.txt:
 README.html:
 TestingLogo.gif:
+vtkLogo.ico:
 vtkLogo.jpg:
 
 [Common/Core]
@@ -951,6 +956,8 @@ IO/vtkShaderCodeLibrary.cxx:
 IO/vtkShaderCodeLibrary.h:
 IO/vtkSimplePointsReader.cxx:
 IO/vtkSimplePointsReader.h:
+IO/vtkSimplePointsWriter.cxx:
+IO/vtkSimplePointsWriter.h:
 IO/vtkWriter.cxx:
 IO/vtkWriter.h:
 # FIXME: Should this go in its own kit? ZLib is pretty small/widely used.
@@ -1287,6 +1294,8 @@ IO/vtkGenericEnSightReader.h:
 
 [IO/NetCDF]
 
+IO/vtkNetCDFCAMReader.cxx:
+IO/vtkNetCDFCAMReader.h:
 IO/vtkNetCDFCFReader.cxx:
 IO/vtkNetCDFCFReader.h:
 IO/vtkNetCDFPOPReader.cxx:
@@ -3482,8 +3491,22 @@ Rendering/vtkImageActor.cxx:
 Rendering/vtkImageActor.h:
 Rendering/vtkImageMapper.cxx:
 Rendering/vtkImageMapper.h:
+Rendering/vtkImageMapper3D.cxx:
+Rendering/vtkImageMapper3D.h:
 Rendering/vtkImageProcessingPass.cxx:
 Rendering/vtkImageProcessingPass.h:
+Rendering/vtkImageProperty.cxx:
+Rendering/vtkImageProperty.h:
+Rendering/vtkImageResliceMapper.cxx:
+Rendering/vtkImageResliceMapper.h:
+Rendering/vtkImageSlice.cxx:
+Rendering/vtkImageSlice.h:
+Rendering/vtkImageSliceCollection.cxx:
+Rendering/vtkImageSliceCollection.h:
+Rendering/vtkImageSliceMapper.cxx:
+Rendering/vtkImageSliceMapper.h:
+Rendering/vtkImageStack.cxx:
+Rendering/vtkImageStack.h:
 Rendering/vtkImageViewer.cxx:
 Rendering/vtkImageViewer.h:
 Rendering/vtkImageViewer2.cxx:
@@ -3687,6 +3710,7 @@ Rendering/vtkImageSlice.cxx:
 Rendering/vtkImageSlice.h:
 Rendering/vtkImageSliceMapper.cxx:
 Rendering/vtkImageSliceMapper.h:
+
 
 [Rendering/FreeType]
 
