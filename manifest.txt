@@ -5,6 +5,10 @@ vtkIncludeDirectories.cmake: <ignore>
 Common/CMakeLists.txt:	<ignore>
 Common/Testing/:	<ignore>
 CMake/CMake2.4/: <ignore>
+CMake/vtk-forward.c.in: <ignore>
+CMake/vtkForwardingExecutable.cmake: <ignore>
+CMake/vtkTestBuiltins.cmake: <ignore>
+CMake/vtkTestSyncBuiltins.cxx: <ignore>
 Filtering/CMakeLists.txt:	<ignore>
 Parallel/CMakeLists.txt: <ignore>
 Imaging/CMakeLists.txt: <ignore>
@@ -20,7 +24,6 @@ CTestConfig.cmake: <ignore>
 .gitattributes: <ignore>
 Testing.txt: <ignore>
 TextAnalysis/CMakeLists.txt: <ignore>
-vtkToolkits.h.in: <ignore>
 Charts/CMakeLists.txt: <ignore>
 GenericFiltering/CMakeLists.txt: <ignore>
 Geovis/CMakeLists.txt: <ignore>
@@ -53,22 +56,26 @@ Imaging/Testing/: <ignore>
 Examples/: <ignore>
 Wrapping/: <ignore>
 GenericFiltering/README.html: <ignore>
-GUISupport/Qt/Chart/: <ignore>
+
 GUISupport/Qt/Testing/: <ignore>
 GUISupport/CMakeLists.txt: <ignore>
 GUISupport/Qt/CMakeLists.txt: <ignore>
 VolumeRendering/Testing/: <ignore>
 VolumeRendering/CMakeLists.txt: <ignore>
+# Deprecated, not moved forward
+GUISupport/Qt/Chart/: <ignore>
 
 [.]
 
 Copyright.txt:
 README.html:
 TestingLogo.gif:
+vtkLogo.ico:
 vtkLogo.jpg:
 
 [Common/Core]
 
+vtkToolkits.h.in:
 vtkConfigure.h.in:
 Common/CaseFolding.txt:
 Common/vtkABI.h:
@@ -320,13 +327,36 @@ Common/vtkWin32OutputWindow.h:
 Common/vtkWin32OutputWindowProcessEncoded.c:
 Common/vtkWin32ProcessOutputWindow.cxx:
 Common/vtkWin32ProcessOutputWindow.h:
-Common/vtkWinCE.cxx:
-Common/vtkWinCE.h:
 Common/vtkWindow.cxx:
 Common/vtkWindow.h:
 Common/vtkWindows.h:
 Common/vtkXMLFileOutputWindow.cxx:
 Common/vtkXMLFileOutputWindow.h:
+Common/vtkMathConfigure.h.in:
+Common/vtkMath.cxx:
+Common/vtkMath.h:
+
+# For vtkDataArray
+Common/vtkLookupTable.cxx:
+Common/vtkLookupTable.h:
+Common/vtkScalarsToColors.cxx:
+Common/vtkScalarsToColors.h:
+
+# For vtkDebugLeaks
+Common/vtkCriticalSection.cxx:
+Common/vtkCriticalSection.h:
+
+# For vtkGarbageCollector
+Common/vtkMultiThreader.cxx:
+Common/vtkMultiThreader.h:
+
+# For vtkMultiThreader
+Common/vtkMutexLock.cxx:
+Common/vtkMutexLock.h:
+
+# For vtkObjectFactory
+Common/vtkDynamicLoader.cxx:
+Common/vtkDynamicLoader.h:
 
 [AMR/Core]
 
@@ -926,6 +956,8 @@ IO/vtkShaderCodeLibrary.cxx:
 IO/vtkShaderCodeLibrary.h:
 IO/vtkSimplePointsReader.cxx:
 IO/vtkSimplePointsReader.h:
+IO/vtkSimplePointsWriter.cxx:
+IO/vtkSimplePointsWriter.h:
 IO/vtkWriter.cxx:
 IO/vtkWriter.h:
 # FIXME: Should this go in its own kit? ZLib is pretty small/widely used.
@@ -1168,7 +1200,6 @@ Hybrid/vtkVRML.h:
 Hybrid/vtkVRMLImporter.cxx:
 Hybrid/vtkVRMLImporter.h:
 
-
 [IO/SQL]
 
 IO/vtkRowQuery.cxx:
@@ -1213,6 +1244,12 @@ IO/vtkTableToDatabaseWriter.cxx:
 IO/vtkTableToDatabaseWriter.h:
 IO/vtkTableWriter.cxx:
 IO/vtkTableWriter.h:
+Infovis/vtkSQLDatabaseGraphSource.h:
+Infovis/vtkSQLDatabaseGraphSource.cxx:
+Infovis/vtkSQLDatabaseTableSource.h:
+Infovis/vtkSQLDatabaseTableSource.cxx:
+Infovis/vtkSQLGraphReader.h:
+Infovis/vtkSQLGraphReader.cxx:
 
 
 [IO/MINC]
@@ -1257,6 +1294,8 @@ IO/vtkGenericEnSightReader.h:
 
 [IO/NetCDF]
 
+IO/vtkNetCDFCAMReader.cxx:
+IO/vtkNetCDFCAMReader.h:
 IO/vtkNetCDFCFReader.cxx:
 IO/vtkNetCDFCFReader.h:
 IO/vtkNetCDFPOPReader.cxx:
@@ -1408,9 +1447,6 @@ Common/vtkFunctionSet.cxx:
 Common/vtkFunctionSet.h:
 Common/vtkInitialValueProblemSolver.cxx:
 Common/vtkInitialValueProblemSolver.h:
-Common/vtkMathConfigure.h.in:
-Common/vtkMath.cxx:
-Common/vtkMath.h:
 Common/vtkMatrix3x3.cxx:
 Common/vtkMatrix3x3.h:
 Common/vtkMatrix4x4.cxx:
@@ -1481,16 +1517,8 @@ Filtering/vtkSimpleScalarTree.h:
 
 Common/vtkClientSocket.cxx:
 Common/vtkClientSocket.h:
-Common/vtkCriticalSection.cxx:
-Common/vtkCriticalSection.h:
 Common/vtkDirectory.cxx:
 Common/vtkDirectory.h:
-Common/vtkDynamicLoader.cxx:
-Common/vtkDynamicLoader.h:
-Common/vtkMultiThreader.cxx:
-Common/vtkMultiThreader.h:
-Common/vtkMutexLock.cxx:
-Common/vtkMutexLock.h:
 Common/vtkProcessStatistics.cxx:
 Common/vtkProcessStatistics.h:
 Common/vtkServerSocket.cxx:
@@ -1604,7 +1632,6 @@ CMake/TestNO_ICC_IDYNAMIC_NEEDED.cxx:
 CMake/TestOggTheoraSubsampling.c:
 CMake/TryRunResults-VTK-bgl-gcc.cmake:
 CMake/UseMatlabMex.cmake:
-CMake/vtkCheckCXXAcceptsFlags.cmake:
 CMake/vtkCheckSourceTree.cmake:
 CMake/vtkCompilerExtras.cmake:
 CMake/vtkDependentOption.cmake:
@@ -1665,16 +1692,6 @@ Infovis/vtkStringToTimePoint.h:
 Infovis/vtkStringToTimePoint.cxx:
 Infovis/vtkTimePointToString.h:
 Infovis/vtkTimePointToString.cxx:
-
-
-[Infovis/GeometryFilters]
-
-Infovis/vtkAppendPoints.h:
-Infovis/vtkAppendPoints.cxx:
-Infovis/vtkPassThrough.h:
-Infovis/vtkPassThrough.cxx:
-Infovis/vtkSCurveSpline.h:
-Infovis/vtkSCurveSpline.cxx:
 
 
 [Infovis/Core]
@@ -1946,10 +1963,6 @@ Infovis/vtkRISReader.h:
 Infovis/vtkRISReader.cxx:
 Infovis/vtkTulipReader.h:
 Infovis/vtkTulipReader.cxx:
-
-
-[IO/XMLInfovis]
-
 Infovis/vtkXGMLReader.h:
 Infovis/vtkXGMLReader.cxx:
 Infovis/vtkXMLTreeReader.h:
@@ -1991,15 +2004,6 @@ Infovis/vtkSplitColumnComponents.cxx:
 Infovis/vtkTransferAttributes.h:
 Infovis/vtkTransferAttributes.cxx:
 
-
-[Infovis/SQL]
-
-Infovis/vtkSQLDatabaseGraphSource.h:
-Infovis/vtkSQLDatabaseGraphSource.cxx:
-Infovis/vtkSQLDatabaseTableSource.h:
-Infovis/vtkSQLDatabaseTableSource.cxx:
-Infovis/vtkSQLGraphReader.h:
-Infovis/vtkSQLGraphReader.cxx:
 
 [Views/Core]
 
@@ -2178,7 +2182,7 @@ TextAnalysis/vtkTokenizer.cxx:
 TextAnalysis/vtkUnityMatrixWeighting.h:
 TextAnalysis/vtkUnityMatrixWeighting.cxx:
 
-[Charts/Context2D]
+[Rendering/Context2D]
 
 Charts/vtkAbstractContextBufferId.h:
 Charts/vtkAbstractContextBufferId.cxx:
@@ -2854,6 +2858,12 @@ Graphics/vtkWarpVector.cxx:
 Graphics/vtkWarpVector.h:
 Graphics/vtkYoungsMaterialInterface.cxx:
 Graphics/vtkYoungsMaterialInterface.h:
+Infovis/vtkAppendPoints.h:
+Infovis/vtkAppendPoints.cxx:
+Infovis/vtkPassThrough.h:
+Infovis/vtkPassThrough.cxx:
+Infovis/vtkSCurveSpline.h:
+Infovis/vtkSCurveSpline.cxx:
 
 [Filters/Verdict]
 
@@ -2972,12 +2982,12 @@ Hybrid/vtkWeightedTransformFilter.h:
 
 [Interaction/Selection]
 
-Filtering/vtkSelection.cxx::
-Filtering/vtkSelection.h::
-Filtering/vtkSelectionNode.cxx::
-Filtering/vtkSelectionNode.h::
-Filtering/vtkSelectionAlgorithm.cxx::
-Filtering/vtkSelectionAlgorithm.h::
+Filtering/vtkSelection.cxx:
+Filtering/vtkSelection.h:
+Filtering/vtkSelectionNode.cxx:
+Filtering/vtkSelectionNode.h:
+Filtering/vtkSelectionAlgorithm.cxx:
+Filtering/vtkSelectionAlgorithm.h:
 Rendering/vtkHardwareSelectionPolyDataPainter.cxx:
 Rendering/vtkHardwareSelectionPolyDataPainter.h:
 Rendering/vtkAbstractPropPicker.cxx:
@@ -3340,12 +3350,10 @@ Rendering/vtkCocoaTkUtilities.mm:
 
 [Rendering/Core]
 
-Common/vtkLogLookupTable.cxx::
-Common/vtkLogLookupTable.h::
-Common/vtkLookupTable.cxx::
-Common/vtkLookupTable.h::
-Common/vtkLookupTableWithEnabling.cxx::
-Common/vtkLookupTableWithEnabling.h::
+Common/vtkLogLookupTable.cxx:
+Common/vtkLogLookupTable.h:
+Common/vtkLookupTableWithEnabling.cxx:
+Common/vtkLookupTableWithEnabling.h:
 Common/vtkPropCollection.cxx:
 Common/vtkPropCollection.h:
 Common/vtkProp.cxx:
@@ -3353,8 +3361,6 @@ Common/vtkProperty2D.cxx:
 Common/vtkProperty2D.h:
 Common/vtkProp.h:
 Common/vtkRayCastStructures.h:
-Common/vtkScalarsToColors.cxx:
-Common/vtkScalarsToColors.h:
 Common/vtkWindowLevelLookupTable.cxx:
 Common/vtkWindowLevelLookupTable.h:
 Filtering/vtkAbstractMapper.cxx:
@@ -3485,8 +3491,22 @@ Rendering/vtkImageActor.cxx:
 Rendering/vtkImageActor.h:
 Rendering/vtkImageMapper.cxx:
 Rendering/vtkImageMapper.h:
+Rendering/vtkImageMapper3D.cxx:
+Rendering/vtkImageMapper3D.h:
 Rendering/vtkImageProcessingPass.cxx:
 Rendering/vtkImageProcessingPass.h:
+Rendering/vtkImageProperty.cxx:
+Rendering/vtkImageProperty.h:
+Rendering/vtkImageResliceMapper.cxx:
+Rendering/vtkImageResliceMapper.h:
+Rendering/vtkImageSlice.cxx:
+Rendering/vtkImageSlice.h:
+Rendering/vtkImageSliceCollection.cxx:
+Rendering/vtkImageSliceCollection.h:
+Rendering/vtkImageSliceMapper.cxx:
+Rendering/vtkImageSliceMapper.h:
+Rendering/vtkImageStack.cxx:
+Rendering/vtkImageStack.h:
 Rendering/vtkImageViewer.cxx:
 Rendering/vtkImageViewer.h:
 Rendering/vtkImageViewer2.cxx:
@@ -3681,6 +3701,7 @@ Rendering/vtkVolumetricPass.h:
 Rendering/vtkWindowToImageFilter.cxx:
 Rendering/vtkWindowToImageFilter.h:
 
+
 [Rendering/FreeType]
 
 Rendering/vtkFreeTypeLabelRenderStrategy.cxx:
@@ -3788,8 +3809,6 @@ Rendering/vtkOpenGLGlyph3DMapper.cxx:
 Rendering/vtkOpenGLGlyph3DMapper.h:
 Rendering/vtkOpenGLHardwareSupport.cxx:
 Rendering/vtkOpenGLHardwareSupport.h:
-Rendering/vtkOpenGLImageActor.cxx:
-Rendering/vtkOpenGLImageActor.h:
 Rendering/vtkOpenGLImageMapper.cxx:
 Rendering/vtkOpenGLImageMapper.h:
 Rendering/vtkOpenGLLight.cxx:
@@ -3825,7 +3844,11 @@ Rendering/vtkOpenGLStateCache.h:
 Rendering/vtkOpenGLTexture.cxx:
 Rendering/vtkOpenGLTexture.h:
 Rendering/vtkgluPickMatrix.h:
-
+Rendering/vtkOpenGLImageResliceMapper.cxx:
+Rendering/vtkOpenGLImageResliceMapper.h:
+Rendering/vtkOpenGLImageSliceMapper.cxx:
+Rendering/vtkOpenGLImageSliceMapper.h:
+Rendering/vtkTextureBicubicARB_fp.asm:
 
 [Rendering/MESA]
 
@@ -3841,8 +3864,6 @@ Rendering/vtkMesaDisplayListPainter.cxx:
 Rendering/vtkMesaDisplayListPainter.h:
 Rendering/vtkMesaFreeTypeTextMapper.cxx:
 Rendering/vtkMesaFreeTypeTextMapper.h:
-Rendering/vtkMesaImageActor.cxx:
-Rendering/vtkMesaImageActor.h:
 Rendering/vtkMesaImageMapper.cxx:
 Rendering/vtkMesaImageMapper.h:
 Rendering/vtkMesaLight.cxx:
@@ -3867,7 +3888,10 @@ Rendering/vtkMesaScalarsToColorsPainter.cxx:
 Rendering/vtkMesaScalarsToColorsPainter.h:
 Rendering/vtkMesaTexture.cxx:
 Rendering/vtkMesaTexture.h:
-
+Rendering/vtkMesaImageResliceMapper.cxx:
+Rendering/vtkMesaImageResliceMapper.h:
+Rendering/vtkMesaImageSliceMapper.cxx:
+Rendering/vtkMesaImageSliceMapper.h:
 
 [Rendering/Text]
 
@@ -3937,13 +3961,6 @@ Rendering/vtkWin32OpenGLRenderWindow.cxx:
 Rendering/vtkWin32OpenGLRenderWindow.h:
 Rendering/vtkWin32RenderWindowInteractor.cxx:
 Rendering/vtkWin32RenderWindowInteractor.h:
-
-
-[Rendering/WinCE]
-
-Rendering/vtkWinCEOpenGLRenderWindow.cxx:
-Rendering/vtkWinCEOpenGLRenderWindow.h:
-
 
 [Rendering/X]
 
