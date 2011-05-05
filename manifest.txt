@@ -2255,6 +2255,10 @@ Charts/vtkColorSeries.h:
 Charts/vtkColorSeries.cxx:
 Charts/vtkColorTransferFunctionItem.h:
 Charts/vtkColorTransferFunctionItem.cxx:
+Charts/vtkColorTransferControlPointsItem.cxx:
+Charts/vtkColorTransferControlPointsItem.h:
+Charts/vtkCompositeControlPointsItem.cxx:
+Charts/vtkCompositeControlPointsItem.h:
 Charts/vtkCompositeTransferFunctionItem.h:
 Charts/vtkCompositeTransferFunctionItem.cxx:
 Charts/vtkControlPointsItem.h:
@@ -3399,6 +3403,8 @@ Rendering/vtkActorCollection.cxx:
 Rendering/vtkActorCollection.h:
 Rendering/vtkAssembly.cxx:
 Rendering/vtkAssembly.h:
+Rendering/vtkAxesFollower.cxx:
+Rendering/vtkAxesFollower.h:
 Rendering/vtkCamera.cxx:
 Rendering/vtkCamera.h:
 Rendering/vtkCameraActor.cxx:
